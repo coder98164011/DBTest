@@ -18,7 +18,10 @@ namespace DBTest
                     cmd.Connection = conn;
                     cmd.CommandText = "";
                     cmd.CommandType = CommandType.Text;
-                    SqlDataReader sdr = cmd.ExecuteReader();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+
+                    }
 
                 }
             }
